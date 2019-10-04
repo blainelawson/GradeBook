@@ -92,3 +92,6 @@ C:\Users\Blaine M. Lawson\gradebook\test\GradeBook.Tests\obj\Debug\netcoreapp3.0
 C:\Users\Blaine M. Lawson\gradebook\test\GradeBook.Tests\obj\Debug\netcoreapp3.0\GradeBook.Tests.csproj.CopyComplete
 C:\Users\Blaine M. Lawson\gradebook\test\GradeBook.Tests\obj\Debug\netcoreapp3.0\GradeBook.Tests.dll
 C:\Users\Blaine M. Lawson\gradebook\test\GradeBook.Tests\obj\Debug\netcoreapp3.0\GradeBook.Tests.pdb
+C:\Users\Blaine M. Lawson\gradebook\test\GradeBook.Tests\bin\Debug\netcoreapp3.0\GradeBook.exe
+C:\Users\Blaine M. Lawson\gradebook\test\GradeBook.Tests\bin\Debug\netcoreapp3.0\GradeBook.dll
+C:\Users\Blaine M. Lawson\gradebook\test\GradeBook.Tests\bin\Debug\netcoreapp3.0\GradeBook.pdb
