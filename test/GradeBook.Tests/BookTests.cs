@@ -3,11 +3,11 @@ using Xunit;
 
 namespace GradeBook.Tests
 {
-    public class UnitTest1
+    public class BookTests
     {
         [Fact] // <---this is an attribute in the test 
                //     (a little piece of data attached to what follows)
-        public void Test1()
+        public void BookCaluclatesAnAverageGrade()
         {
             // arrange
             var book = new Book("");

@@ -11,7 +11,7 @@ namespace GradeBook
         // This is ran upon instantiation
         {
             grades = new List<double>();
-            this.name = name;
+            Name = name;
         }
         
     //  [export][return type][method name](){}
@@ -40,6 +40,6 @@ namespace GradeBook
         }
 
         private List<double> grades;
-        private string name;
+        public string Name;
     }
 }
