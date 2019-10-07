@@ -6,6 +6,16 @@ namespace GradeBook.Tests
     public class TypeTests
     {
         [Fact]
+        public void ValidatesGrade()
+        {
+            var book = new Book("");
+
+            book.AddGrade(105);
+
+            Assert.DoesNotContain(105, book.grades);
+        }
+
+        [Fact]
         public void StringsBehaveLikeValueTypes()
         {
             string name = "Scott";
