@@ -13,6 +13,32 @@ namespace GradeBook
             grades = new List<double>();
             Name = name;
         }
+
+        public void AddLetterGrade(char letter)
+        {
+            switch(letter)
+            {
+                case 'A':
+                    AddGrade(90);
+                    break;
+                case 'B':
+                    AddGrade(80);
+                    break;
+                case 'C':
+                    AddGrade(70);
+                    break;
+                case 'D':
+                    AddGrade(60);
+                    break;
+                case 'F':
+                    AddGrade(50);
+                    break;
+                
+                default:
+                    AddGrade(0);
+                    break;                
+            }
+        }
         
     //  [export][return type][method name](){}
         public Statistics GetStatistics()
@@ -28,9 +54,18 @@ namespace GradeBook
             //     result.Low = Math.Min(grade, result.Low);
             //     result.Average += grade;
             // }
-            
+
             for(var index = 0; index < grades.Count; index += 1)
             {
+                if(grades[index] == 42.1)
+                {
+                    break; // or `continue` here, if you only 
+                           // want to skip this iteration
+                           // Can also use `goto e.g. done` which will
+                           // direct the compiler to `done:` somewhere
+                           // else in the code, but it's ill-advised.
+                }
+
                 result.High = Math.Max(grades[index], result.High);
                 result.Low = Math.Min(grades[index], result.Low);
                 result.Average += grades[index];
@@ -49,6 +84,26 @@ namespace GradeBook
 
             result.Average /= grades.Count;
 
+            switch(result.Average)
+            {
+                case var d when d > 90.0:
+                    result.Letter = 'A';
+                    break;
+                case var d when d > 80.0:
+                    result.Letter = 'B';
+                    break;
+                case var d when d > 70.0:
+                    result.Letter = 'C';
+                    break;
+                case var d when d > 60.0:
+                    result.Letter = 'D';
+                    break;
+                
+                default:
+                    result.Letter = 'F';
+                    break;
+            }
+
             return result;
         }
 
@@ -60,7 +115,7 @@ namespace GradeBook
             }
             else
             {
-                Console.WriteLine("Invalid value");
+                throw new ArgumentException($"Invalid {nameof(grade)}");
             }
         }
 

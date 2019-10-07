@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.0": []
   },
   "packageFolders": {
-    "/home/blainelawson/.nuget/packages/": {}
+    "C:\\Users\\Blaine M. Lawson\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/c/Users/Blaine M. Lawson/gradebook/src/GradeBook/GradeBook.csproj",
+      "projectUniqueName": "C:\\Users\\Blaine M. Lawson\\gradebook\\src\\GradeBook\\GradeBook.csproj",
       "projectName": "GradeBook",
-      "projectPath": "/mnt/c/Users/Blaine M. Lawson/gradebook/src/GradeBook/GradeBook.csproj",
-      "packagesPath": "/home/blainelawson/.nuget/packages/",
-      "outputPath": "/mnt/c/Users/Blaine M. Lawson/gradebook/src/GradeBook/obj/",
+      "projectPath": "C:\\Users\\Blaine M. Lawson\\gradebook\\src\\GradeBook\\GradeBook.csproj",
+      "packagesPath": "C:\\Users\\Blaine M. Lawson\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Blaine M. Lawson\\gradebook\\src\\GradeBook\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/blainelawson/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Blaine M. Lawson\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
@@ -56,7 +56,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
