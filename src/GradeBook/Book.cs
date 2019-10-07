@@ -22,12 +22,30 @@ namespace GradeBook
             result.High = double.MinValue;
             result.Low = double.MaxValue;
 
-            foreach(double grade in grades)
+            // foreach(double grade in grades)
+            // {
+            //     result.High = Math.Max(grade, result.High);
+            //     result.Low = Math.Min(grade, result.Low);
+            //     result.Average += grade;
+            // }
+            
+            for(var index = 0; index < grades.Count; index += 1)
             {
-                result.High = Math.Max(grade, result.High);
-                result.Low = Math.Min(grade, result.Low);
-                result.Average += grade;
+                result.High = Math.Max(grades[index], result.High);
+                result.Low = Math.Min(grades[index], result.Low);
+                result.Average += grades[index];
             }
+
+            // var index = 0;
+
+            // do
+            // {
+            //     result.High = Math.Max(grades[index], result.High);
+            //     result.Low = Math.Min(grades[index], result.Low);
+            //     result.Average += grades[index];
+
+            //     index++;
+            // } while(index < grades.Count);
 
             result.Average /= grades.Count;
 
@@ -36,10 +54,17 @@ namespace GradeBook
 
         public void AddGrade(double grade)
         {
-            grades.Add(grade);
+            if(grade <= 100 && grade >= 0)
+            {
+                grades.Add(grade);
+            }
+            else
+            {
+                Console.WriteLine("Invalid value");
+            }
         }
 
-        private List<double> grades;
+        public List<double> grades;
         public string Name;
     }
 }
