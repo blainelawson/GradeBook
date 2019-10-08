@@ -3,17 +3,46 @@ using Xunit;
 
 namespace GradeBook.Tests
 {
+
+    public delegate string WriteLogDelegate(string logMessage);
+    // ^^^ A delegate that describes any method that returns a string
+    // and takes a string. The allow you to use a variable to store a method
+
     public class TypeTests
     {
+        int count = 0;
+
         [Fact]
-        public void ValidatesGrade()
+        public void WriteLogDelegateCanPointToMethod()
         {
-            var book = new Book("");
+            WriteLogDelegate log = ReturnMessage;
 
-            book.AddGrade(105);
+            log += ReturnMessage;
+            log += IncrementCount;
 
-            Assert.DoesNotContain(105, book.grades);
+            var result = log("Hello!");
+            Assert.Equal(3, count);
         }
+
+        string IncrementCount(string message)
+        {
+            count++;
+            return message.ToLower();
+        }
+        string ReturnMessage(string message)
+        {
+            count++;
+            return message;
+        }
+        // [Fact]
+        // public void ValidatesGrade()
+        // {
+        //     var book = new Book("");
+
+        //     book.AddGrade(105);
+
+        //     Assert.DoesNotContain(105, book.grades);
+        // }
 
         [Fact]
         public void StringsBehaveLikeValueTypes()
